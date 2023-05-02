@@ -6,7 +6,7 @@ public class Program
     {
         Console.WriteLine("Write notebook price:");
         double notebookPrice = double.Parse(Console.ReadLine());
-        
+
         Console.WriteLine("Write pen price: ");
         double penPrice = double.Parse(Console.ReadLine());
 
