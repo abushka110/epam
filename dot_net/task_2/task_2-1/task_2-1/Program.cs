@@ -3,30 +3,33 @@ public class Program
 {
     public static void Main()
     {
-        Console.WriteLine("Скільки кошутє зошит? ");
-        double notebookPrice = double.Parse(Console.ReadLine());
+        int notebookCount, penCount;
+        double notebookPrice, penPrice, howMuchMoney, fullPrice;
 
-        Console.WriteLine("Скільки кошутє ручка? ");
-        double penPrice = double.Parse(Console.ReadLine());
+        Console.WriteLine("Enter the price of the notebook: ");
+        notebookPrice = double.Parse(Console.ReadLine());
 
-        Console.WriteLine("Скільки зошитів потрібно? ");
-        int notebookCount = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Enter the price of the pen: ");
+        penPrice = double.Parse(Console.ReadLine());
 
-        Console.WriteLine("Скільки ручок потрібно? ");
-        int penCount = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("How many notebooks do you need?? ");
+        notebookCount = Convert.ToInt32(Console.ReadLine());
 
-        Console.WriteLine("Скільки грошей маєте?");
-        double howMuchMoney = double.Parse(Console.ReadLine());
+        Console.WriteLine("How many pens do you need? ");
+        penCount = Convert.ToInt32(Console.ReadLine());
 
-        double fullPrice = notebookPrice * notebookCount + penPrice * penCount;
+        Console.WriteLine("How much money do you have?");
+        howMuchMoney = double.Parse(Console.ReadLine());
+
+        fullPrice = notebookPrice * notebookCount + penPrice * penCount;
 
         if (howMuchMoney > fullPrice)
         {
-            Console.WriteLine($"Якщо купити {notebookCount} зошитів і {penCount} ручок в вас залишиться {howMuchMoney % fullPrice}грн");
+            Console.WriteLine($"If you buy {notebookCount} copybooks and {penCount} pens, you will have {howMuchMoney % fullPrice}UAH left");
         }
         else
         {
-            Console.WriteLine($"Вам не вистачить грошей на {notebookCount} зошитів і {penCount} ручок");
+            Console.WriteLine($"You don't have enough money to buy {notebookCount} copybooks and {penCount} pens");
         }
     }
 }
