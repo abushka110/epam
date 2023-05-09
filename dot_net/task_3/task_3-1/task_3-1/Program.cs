@@ -5,12 +5,12 @@ class Program
     static void Main(string[] args)
     {
         Console.Write("Enter a number A: ");
-        int A = int.Parse(Console.ReadLine());
+        int numberA = int.Parse(Console.ReadLine());
 
         Console.Write("Enter a number B: ");
-        int B = int.Parse(Console.ReadLine());
+        int numberB = int.Parse(Console.ReadLine());
 
-        for (int i = A; i >= B; i--)
+        for (int i = numberA; i >= numberB; i--)
         {
             Console.WriteLine(i);
         }
